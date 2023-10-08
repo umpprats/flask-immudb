@@ -1,0 +1,5 @@
+flask==2.3.3
+flask-marshmallow==0.15.0
+marshmallow==3.20.1
+immudb-py==1.4.0
+
