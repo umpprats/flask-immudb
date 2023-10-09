@@ -1,0 +1,25 @@
+version: "3"
+services:
+  immudb:
+    container_name: immudb
+    image: codenotary/immudb:1.5.0-bullseye-slim
+    restart: always
+    volumes:
+       - ~/dockers/immudb/_data:/var/lib/immudb
+    ports:
+      - '3322:3322'
+      - '9497:9497'
+      - '8082:8080'
+    environment:
+      - IMMUDB_ADDRESS=0.0.0.0
+      - IMMUDB_AUTH=true
+      - IMMUDB_ADMIN_PASSWORD=${IMMUDB_PASSWORD}
+      - IMMUDB_PGSQL_SERVER=false
+    networks:
+      - red
+
+networks:
+    red:
+      external: true
+      driver: bridge
+

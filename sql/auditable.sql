@@ -1,0 +1,1 @@
+CREATE TABLE IF NOT EXISTS auditable (id INTEGER AUTO_INCREMENT, created_at FLOAT, created_by VARCHAR, filename VARCHAR, hash VARCHAR, PRIMARY KEY id);
